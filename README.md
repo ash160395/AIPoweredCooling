@@ -2,12 +2,14 @@
 
 Problem to solve
 
-In 2016, DeepMind AI minimized a big part of Google’s cost by reducing Google Data Centre Cooling Bill by 40% using their DQN AI model (Deep Q-Learning). In this case study, we will do something very similar. We will set up our own server environment, and we will build an AI that will be controlling the cooling/heating of the server so that it stays in an optimal range of temperatures while saving the maximum energy, therefore minimizing the costs. And just as DeepMind AI did, our goal will be to achieve at least 40% energy saving.
+In 2016, DeepMind AI minimized a big part of Google’s cost by reducing Google Data Centre Cooling Bill by 40% using their DQN AI model (Deep Q-Learning). We will do something very similar. We will we will build an AI that will be controlling the cooling/heating of the server so that it stays in an optimal range of temperatures while saving the maximum energy, therefore minimizing the costs. And just as DeepMind AI did, our goal will be to achieve at least 40% energy saving.
 
 Environment to define
+
 Before we define the states, actions and rewards, we need to explain how the server operates. We will do that in several steps. First, we will list all the environment parameters and variables by which the server is controlled. After that we will set the essential assumption of the problem, on which our AI will rely to provide a solution. Then we will specify how we will simulate the whole process. And eventually we will explain the overall functioning of the server, and how the AI plays its role.
 
 Parameters:
+
 • the average atmospheric temperature over a month
 • the optimal range of temperatures of the server, which will be [18◦C,24◦C]
 • the minimum temperature of the server below which it fails to operate, which will be −20◦C
@@ -19,6 +21,7 @@ Parameters:
 • the maximum rate of data transmission that can go up or down per minute, which will be 10
 
 Variables:
+
 • the temperature of the server at any minute
 • the number of users in the server at any minute
 • the rate of data transmission at any minute
